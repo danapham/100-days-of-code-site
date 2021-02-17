@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import HomeUnauthed from './HomeUnauthed';
+import HomeAuthed from './HomeAuthed';
 
 class Home extends Component {
   loadComponent = () => {
     let component = '';
     if (this.props.authed) {
-      component = <div>
-      <h1>Home Authed</h1>
-    </div>;
+      component = <HomeAuthed />;
     } else {
       component = <HomeUnauthed />;
     }
